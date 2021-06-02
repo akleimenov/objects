@@ -34,7 +34,18 @@ const person = {
 }
 
 for (let key in person) {
-    if (key === 'age') person[key] = `${person[key]} ages`
+    if (key === 'firstName') {
+        key = 'First name'
+        person['First name'] = person['firstName']
+    }
+    if (key === 'lastName') {
+        key = 'Last name'
+        person['Last name'] = person['lastName']
+    }
+    if (key === 'age') {
+        key = 'Age'
+        person['Age'] = `${person['age']} ages`
+    }
     if (key === 'location') {
         key = 'Where to find'
         person['Where to find'] = person['location']
