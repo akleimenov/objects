@@ -26,7 +26,7 @@ Age: 25 ages
 Where to find: Caribbean sea
 */
 
-/*const person = {
+const person = {
     firstName: 'Jack',
     lastName: 'Sparrow',
     age: 25,
@@ -36,35 +36,18 @@ Where to find: Caribbean sea
 for (let key in person) {
     if (key === 'firstName') {
         key = 'First name'
-        person['First name'] = person['firstName']
+        console.log(`First name ${person['firstName']}`)
     }
     if (key === 'lastName') {
         key = 'Last name'
-        person['Last name'] = person['lastName']
+        console.log(`Last name ${person['lastName']}`)
     }
     if (key === 'age') {
         key = 'Age'
-        person['Age'] = `${person['age']} ages`
+        console.log(`Age ${person['age']} ages`)
     }
     if (key === 'location') {
         key = 'Where to find'
-        person['Where to find'] = person['location']
+        console.log(`Where to find ${person['location']}`)
     }
-    console.log(person)
 }
-
-
-*/
-const btn = document.querySelector('button')
-const input = document.querySelector('input')
-const text = document.querySelector('.text-content')
-
-btn.addEventListener('click', (e) => {
-    console.log(e.target)
-    text.innerHTML = input.value
-    btn.style.backgroundColor = 'blue'
-})
-
-text.addEventListener('mouseover', () => {
-    text.style.border = '1px solid red'
-})
