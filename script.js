@@ -26,7 +26,7 @@ Age: 25 ages
 Where to find: Caribbean sea
 */
 
-const person = {
+/*const person = {
     firstName: 'Jack',
     lastName: 'Sparrow',
     age: 25,
@@ -50,5 +50,21 @@ for (let key in person) {
         key = 'Where to find'
         person['Where to find'] = person['location']
     }
-    console.log(`${key}: ${person[key]}`)
+    console.log(person)
 }
+
+
+*/
+const btn = document.querySelector('button')
+const input = document.querySelector('input')
+const text = document.querySelector('.text-content')
+
+btn.addEventListener('click', (e) => {
+    console.log(e.target)
+    text.innerHTML = input.value
+    btn.style.backgroundColor = 'blue'
+})
+
+text.addEventListener('mouseover', () => {
+    text.style.border = '1px solid red'
+})
